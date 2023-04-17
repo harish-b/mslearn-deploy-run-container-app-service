@@ -31,6 +31,7 @@ jobs:
       with:
         push: true
         tags: bakerycontainerregistry.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_0c3c13d5d9b34a29a836c980a590ef2d }}/webimage:${{ github.sha }}
+        context: .
         file: ./node/Dockerfile
 
   deploy:
